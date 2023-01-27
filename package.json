@@ -1,0 +1,48 @@
+{
+  "name": "docraft",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "lint": "eslint . --ext .ts",
+    "prettier:check-diff": "prettier --config .prettierrc.json -c $(git diff HEAD --relative --name-only --diff-filter d | grep -E './src/app/**/*.(html|ts)' | xargs) --ignore-unknown",
+    "prettier:fix-diff": "prettier --config .prettierrc.json -w $(git diff HEAD --relative --name-only --diff-filter d | grep -E './src/app/**/*.(html|ts)' | xargs) --ignore-unknown",
+    "prettier:check-all": "prettier --config .prettierrc.json -c ./src/app/**/*.ts ./src/app/**/*.html --ignore-unknown",
+    "prettier:fix-all": "prettier --config .prettierrc.json -w ./src/app/**/*.ts ./src/app/**/*.html --ignore-unknown"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^14.0.0",
+    "@angular/common": "^14.0.0",
+    "@angular/compiler": "^14.0.0",
+    "@angular/core": "^14.0.0",
+    "@angular/forms": "^14.0.0",
+    "@angular/platform-browser": "^14.0.0",
+    "@angular/platform-browser-dynamic": "^14.0.0",
+    "@angular/router": "^14.0.0",
+    "rxjs": "~7.5.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^14.0.1",
+    "@angular/cli": "~14.0.1",
+    "@angular/compiler-cli": "^14.0.0",
+    "typescript": "~4.7.2",
+    "eslint": "~8.12.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-cypress": "^2.10.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.4.6",
+    "eslint-plugin-jsdoc": "^39.3.2",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-rxjs": "^5.0.2",
+    "eslint-plugin-rxjs-angular": "^2.0.0",
+    "eslint-plugin-unicorn": "^42.0.0",
+    "@typescript-eslint/parser": "^5.18.0",
+    "@typescript-eslint/eslint-plugin": "~5.18.0",
+    "prettier": "^2.7.1"
+  }
+}

@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  height: 100%;
+  width: 250px;
+
+  flex-direction: column;
+
+  background-color: whitesmoke;
+}
+
+.content {
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-height: 0;
+}
+
+.user {
+  height: 40px;
+}
